@@ -28,7 +28,28 @@ export default {
     '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/fontawesome',
+    '@nuxt/image',
   ],
+
+  image: {
+    presets: {
+      thumbnail: {
+        modifiers: {
+          format: 'jpg',
+          width: 340,
+          height: 256,
+        },
+      },
+    },
+  },
+
+  fontawesome: {
+    icons: {
+      brands: ['faGithub', 'faGitlab', 'faInstagram'],
+      regular: ['faArrowAltCircleDown'],
+    },
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [

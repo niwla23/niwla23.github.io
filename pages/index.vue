@@ -1,13 +1,24 @@
 <template>
   <section class="bg-background-main">
     <header class="h-screen">
-      <img
+      <nuxt-img
         src="/background.jpg"
         class="h-full w-full object-cover absolute z-0"
       />
-      <figure class="z-50 absolute ml-16 mt-48 text-white">
-        <h1 class="text-6xl">Alwin Lohrie</h1>
+      <figure class="z-50 absolute ml-16 mt-64 text-white">
+        <h1 class="text-6xl mr-64">Alwin Lohrie</h1>
         <p class="text-xl">Hard und Software</p>
+        <p class="text-4xl">
+          <a href="https://github.com/niwla23" target="_blank">
+            <font-awesome-icon :icon="['fab', 'github']" />
+          </a>
+          <a href="https://gitlab.com/niwla2305" target="_blank">
+            <font-awesome-icon :icon="['fab', 'gitlab']" />
+          </a>
+          <a href="https://instagram.com/niwla23" target="_blank">
+            <font-awesome-icon :icon="['fab', 'instagram']" />
+          </a>
+        </p>
       </figure>
       <svg
         class="absolute h-full w-full md:w-6/12 -m-1"
@@ -35,11 +46,19 @@
           fill="#dfebff"
         />
       </svg>
+      <figure
+        class="absolute bottom-0 flex flex-row w-full justify-center pb-48 animate-scroll-down"
+      >
+        <font-awesome-icon
+          class="text-white text-6xl"
+          :icon="['far', 'arrow-alt-circle-down']"
+        />
+      </figure>
     </header>
 
     <section>
-      <h2 class="text-3xl text-center">Skills</h2>
-      <div class="grid md:grid-cols-4">
+      <SectionHeader>Skills</SectionHeader>
+      <div class="grid md:grid-cols-4 gap-16 p-8 md:p-32">
         <Skill
           title="Python"
           text="Backend (Flask), Automation"
@@ -95,7 +114,6 @@
           main-color="#dbdd3c"
           background-color="#61dafb"
           :main-rotation="323"
-          :background-rotation="163"
         />
         <Skill
           title="Web-Design"
@@ -103,8 +121,59 @@
           main-color="#da55f4"
           background-color="#8061fb"
           :main-rotation="247"
-          :background-rotation="291"
         />
+        <Skill
+          title="Datenbanken"
+          text="PostgreSQL, Redis, MySQL, MongoDB"
+          main-color="#7aaee3"
+          background-color="#e3af7a"
+          :main-rotation="247"
+        />
+        <Skill
+          title="IoT"
+          text="MQTT, openHAB, Influx, Grafana"
+          main-color="#fff14b"
+          background-color="#4b59ff"
+          :main-rotation="67"
+        />
+        <Skill
+          title="CI/CD"
+          text="GitLab CI, GitHub Actions"
+          main-color="#ff5252"
+          background-color="#ac0000"
+          :main-rotation="309"
+        />
+        <Skill
+          title="Löten"
+          text="THT"
+          main-color="#00a142"
+          background-color="#005322"
+          :main-rotation="234"
+        />
+      </div>
+    </section>
+    <section>
+      <SectionHeader>Projekte</SectionHeader>
+      <div class="grid md:grid-cols-4 gap-4 p-8 md:p-32">
+        <figure
+          v-for="project in projects"
+          :key="project.path"
+          class="bg-white article-card cursor-pointer shadow-lg rounded-md"
+        >
+          <div class="overflow-hidden">
+            <nuxt-img
+              preset="thumbnail"
+              :src="'/postthumbs/' + project.image"
+              class="object-cover h-64 w-full article-image rounded-md"
+            />
+          </div>
+          <div class="p-4">
+            <h3 class="text-lg pt-2 pb-2">{{ project.title }}</h3>
+            <summary class="block">
+              {{ project.description }}
+            </summary>
+          </div>
+        </figure>
       </div>
     </section>
   </section>
@@ -113,43 +182,32 @@
 <script lang="ts">
 import Vue from 'vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  async asyncData({ $content, params }) {
+    const projects = await $content('projects')
+      .only(['title', 'image', 'tags', 'slug', 'description'])
+      .sortBy('title')
+      .fetch()
+
+    return {
+      projects,
+    }
+  },
+})
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-@apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+<style scoped>
+.article-image,
+.article-card {
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+.article-card:hover > div > .article-image {
+  transform: scale(1.2) rotate(4deg);
 }
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+.article-card:hover {
+  transform: scale(1.04);
 }
 </style>
