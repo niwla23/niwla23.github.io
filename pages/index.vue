@@ -58,7 +58,9 @@
 
     <section>
       <SectionHeader>Skills</SectionHeader>
-      <div class="grid md:grid-cols-4 gap-16 p-8 md:p-32">
+      <div
+        class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 p-8 md:p-16 xl:p-32"
+      >
         <Skill
           title="Python"
           text="Backend (Flask), Automation"
