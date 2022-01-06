@@ -1,9 +1,8 @@
 <template>
   <figure class="relative">
     <svg
-      :style="{ '--transform-rotate': backgroundRotation + 'deg' }"
       version="1.1"
-      class="absolute"
+      class="absolute pointer-events-none"
       viewBox="467 3242 480.84 481.09"
       xmlns="http://www.w3.org/2000/svg"
     >
@@ -12,7 +11,9 @@
         :fill="backgroundColor"
       />
     </svg>
-    <div class="absolute grid place-items-center h-full w-full z-50">
+    <div
+      class="absolute grid place-items-center h-full w-full z-50 pointer-events-none"
+    >
       <div class="text-center w-48">
         <h3 class="text-3xl font-bold" :style="{ color: textColor }">
           {{ title }}
@@ -24,7 +25,7 @@
       :style="{ '--transform-rotate': mainRotation + 'deg' }"
       version="1.1"
       viewBox="467 3242 480.84 481.09"
-      class="transform"
+      class="transform foreground"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
@@ -63,10 +64,26 @@ export default Vue.extend({
       required: true,
       type: Number,
     },
-    backgroundRotation: {
-      required: true,
-      type: Number,
-    },
   },
 })
 </script>
+
+<style scoped>
+.foreground {
+  transition: transform 0.7s ease-in-out;
+}
+.foreground:hover {
+  transform: rotate(360deg);
+  transform: scale(0.8);
+}
+
+figure {
+  transform: scale(1);
+  transition: 10s all ease;
+}
+
+figure:hover {
+  transform: scale(1.1);
+  transition: 1s all ease;
+}
+</style>
