@@ -42,13 +42,13 @@
       <svg
         class="absolute w-full h-32 bottom-0"
         version="1.1"
-        viewBox="303.59 2945.6 1923.8 230"
+        viewBox="310.59 2945.6 1913.8 230"
         preserveAspectRatio="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="m2225 3064.2-365.57-89.603-307.48 89.603-402.63-116.15-391.61 158.19-248.59-135.45-203.12 135.45v69.72h1919z"
-          fill="#dfebff"
+          class="fill-background-main dark:fill-gray-900"
         />
       </svg>
       <figure
@@ -165,26 +165,11 @@
       <a id="projects"></a>
       <SectionHeader>Projekte</SectionHeader>
       <div class="grid md:grid-cols-4 gap-4 p-8 md:p-32">
-        <nuxt-link
+        <post-card
           v-for="project in projects"
           :key="project.path"
-          :to="'posts/' + project.slug"
-          class="bg-white article-card cursor-pointer shadow-lg rounded-md"
-        >
-          <div class="overflow-hidden">
-            <nuxt-img
-              preset="thumbnail"
-              :src="'/postthumbs/' + project.image"
-              class="object-cover h-64 w-full article-image rounded-md"
-            />
-          </div>
-          <div class="p-4">
-            <h3 class="text-lg pt-2 pb-2">{{ project.title }}</h3>
-            <summary class="block">
-              {{ project.description }}
-            </summary>
-          </div>
-        </nuxt-link>
+          :article="project"
+        />
       </div>
     </section>
   </section>
@@ -196,7 +181,7 @@ import Navbar from '~/components/Navbar.vue'
 
 export default Vue.extend({
   components: { Navbar },
-  async asyncData({ $content, params }) {
+  async asyncData({ $content }) {
     const projects = await $content('posts')
       .only(['title', 'image', 'tags', 'slug', 'description'])
       .sortBy('title')
@@ -217,18 +202,4 @@ export default Vue.extend({
 })
 </script>
 
-<style scoped>
-.article-image,
-.article-card {
-  transition-property: all;
-  transition-duration: 500ms;
-  transition-timing-function: ease-in-out;
-}
 
-.article-card:hover > div > .article-image {
-  transform: scale(1.2) rotate(4deg);
-}
-.article-card:hover {
-  transform: scale(1.04);
-}
-</style>

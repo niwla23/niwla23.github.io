@@ -7,7 +7,7 @@ tags:
   - react native
 ---
 
-SchulHack ist eine App mit der sich der Vertretungsplan des Gymnasiums Walsrode abrufen lässt. Weitere FUnktionen sind das speichern des
+SchulHack ist eine App mit der sich der Vertretungsplan des Gymnasiums Walsrode abrufen lässt. Weitere Funktionen sind das speichern des
 Stundenplans, Aufgabenansicht, Klassenarbeitenübersicht und das Abrufen von Geburtstagen von IServ.
 <!--more-->
 Die App ist in React Native geschrieben.
@@ -172,7 +172,7 @@ beforeRow = JSON.parse(JSON.stringify(parsedRow))
 
 wird dann nur noch die letzte Zeile auf die aktuelle gesetzt. Das merkwürdige JSON Konstrukt drumherum hat den Grund, das JavaScript Objekte nicht kopiert, sondern nur eine Referenz erstellt:
 
-```true
+```typescript
 
 i = {x: 2}
 j = i

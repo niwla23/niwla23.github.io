@@ -1,3 +1,8 @@
+import highlightjs from 'highlight.js'
+
+const wrap = (code, lang) =>
+  `<pre><code class="hljs ${lang}">${code}</code></pre>`
+
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
@@ -14,7 +19,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/css/main.css'],
+  css: ['@/assets/css/main.css', 'highlight.js/styles/github-dark.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -72,8 +77,19 @@ export default {
   },
 
   // Content module configuration: https://go.nuxtjs.dev/config-content
-  content: {},
-
+  content: {
+    markdown: {
+      highlighter(rawCode, lang) {
+        if (!lang) {
+          return wrap(highlightjs.highlightAuto(rawCode).value, lang)
+        }
+        return wrap(
+          highlightjs.highlight(rawCode, { language: lang }).value,
+          lang
+        )
+      },
+    },
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     postcss: { plugins: { tailwindcss: {}, autoprefixer: {} } },

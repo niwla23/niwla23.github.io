@@ -1,7 +1,7 @@
 <template>
   <section class="w-full flex justify-center section-header">
     <div style="width: fit-content">
-      <h2 class="text-3xl text-center"><slot /></h2>
+      <h2 class="text-3xl text-center dark:text-white"><slot /></h2>
       <figure class="w-auto h-2 bg-primary underline" />
     </div>
   </section>
