@@ -8,6 +8,8 @@
       <figure class="z-50 absolute ml-16 mt-64 text-white">
         <h1 class="text-6xl mr-64">Alwin Lohrie</h1>
         <p class="text-xl">Hard und Software</p>
+        <p class="text-xl">{{ age }} Jahre alt</p>
+        <p class="text-xl">Walsrode</p>
         <p class="text-4xl">
           <a href="https://github.com/niwla23" target="_blank">
             <font-awesome-icon :icon="['fab', 'github']" />
@@ -194,6 +196,14 @@ export default Vue.extend({
     return {
       projects,
     }
+  },
+  computed: {
+    age() {
+      return (
+        Math.round(new Date().valueOf() - new Date(2006, 5, 3).valueOf()) /
+        31536000000
+      ).toFixed(2)
+    },
   },
 })
 </script>
