@@ -1,6 +1,9 @@
 <template>
-  <section class="bg-background-main">
+  <section>
     <header class="h-screen">
+      <div class="w-full flex flex-row place-content-end">
+        <navbar class="fixed top-0 z-50 w-3/12" />
+      </div>
       <nuxt-img
         src="/background.jpg"
         class="h-full w-full object-cover absolute z-0"
@@ -51,14 +54,16 @@
       <figure
         class="absolute bottom-0 flex flex-row w-full justify-center pb-48 animate-scroll-down"
       >
-        <font-awesome-icon
-          class="text-white text-6xl"
-          :icon="['far', 'arrow-alt-circle-down']"
-        />
+        <a href="#skills">
+          <font-awesome-icon
+            class="text-white text-6xl"
+            :icon="['far', 'arrow-alt-circle-down']"
+        /></a>
       </figure>
     </header>
 
     <section>
+      <a id="skills"></a>
       <SectionHeader>Skills</SectionHeader>
       <div
         class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 p-8 md:p-16 xl:p-32"
@@ -157,11 +162,13 @@
       </div>
     </section>
     <section>
+      <a id="projects"></a>
       <SectionHeader>Projekte</SectionHeader>
       <div class="grid md:grid-cols-4 gap-4 p-8 md:p-32">
-        <figure
+        <nuxt-link
           v-for="project in projects"
           :key="project.path"
+          :to="'posts/' + project.slug"
           class="bg-white article-card cursor-pointer shadow-lg rounded-md"
         >
           <div class="overflow-hidden">
@@ -177,7 +184,7 @@
               {{ project.description }}
             </summary>
           </div>
-        </figure>
+        </nuxt-link>
       </div>
     </section>
   </section>
@@ -185,10 +192,12 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import Navbar from '~/components/Navbar.vue'
 
 export default Vue.extend({
+  components: { Navbar },
   async asyncData({ $content, params }) {
-    const projects = await $content('projects')
+    const projects = await $content('posts')
       .only(['title', 'image', 'tags', 'slug', 'description'])
       .sortBy('title')
       .fetch()

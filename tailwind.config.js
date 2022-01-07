@@ -1,5 +1,7 @@
 module.exports = {
-  // mode: 'jit',
+  plugins: [require('@tailwindcss/typography')],
+  darkMode: 'media',
+
   theme: {
     fontFamily: {
       sans: ['Source Sans Pro', 'sans-serif'],
@@ -8,6 +10,7 @@ module.exports = {
     extend: {
       colors: {
         primary: '#07666e',
+        'primary-transparent': 'rgba(7, 102, 110, 0.8)',
         'background-main': '#dfebff',
       },
       keyframes: {
