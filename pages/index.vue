@@ -194,12 +194,10 @@ export default Vue.extend({
   computed: {
     age() {
       return (
-        Math.round(new Date().valueOf() - new Date(2006, 5, 3).valueOf()) /
+        Math.round(new Date().valueOf() - new Date(2006, 4, 3).valueOf()) /
         31536000000
       ).toFixed(2)
     },
   },
 })
 </script>
-
-
