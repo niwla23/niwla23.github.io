@@ -8,8 +8,8 @@
         src="/background.jpg"
         class="h-full w-full object-cover absolute z-0"
       />
-      <figure class="z-50 absolute ml-16 mt-64 text-white">
-        <h1 class="text-6xl mr-64">Alwin Lohrie</h1>
+      <figure class="z-50 absolute ml-16 mt-32 sm:mt-64 text-white">
+        <h1 class="text-6xl w-16 lg:w-auto">Alwin Lohrie</h1>
         <p class="text-xl">Hard und Software</p>
         <p class="text-xl">{{ age }} Jahre alt</p>
         <p class="text-xl">Walsrode</p>

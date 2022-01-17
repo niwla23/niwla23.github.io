@@ -1,6 +1,6 @@
 <template>
   <div class="bg-background-main dark:bg-neutral-900 min-h-screen pb-8">
-    <Nuxt class="min-h-screen" />
+    <Nuxt class="min-h-screen overflow-x-hidden" />
     <footer class="text-center text-gray-300 space-x-4">
       <div>
         <p>Copyright © {{ year }} niwla23</p>
