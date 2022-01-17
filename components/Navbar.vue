@@ -3,7 +3,7 @@
     <transition name="menu">
       <nav
         v-if="showMenu || !isMobile"
-        class="p-6 bg-primary-transparent w-full"
+        class="p-6 bg-primary-transparent w-screen"
       >
         <button
           v-if="isMobile"
