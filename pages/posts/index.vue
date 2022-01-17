@@ -5,7 +5,7 @@
     </div>
     <div class="p-8 md:p-32 md:pt-16">
       <h1 class="dark:text-white text-3xl pb-4">Blog</h1>
-      <div class="grid md:grid-cols-4 gap-4">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
         <post-card
           v-for="project in projects"
           :key="project.path"

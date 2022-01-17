@@ -164,7 +164,9 @@
     <section>
       <a id="projects"></a>
       <SectionHeader>Projekte</SectionHeader>
-      <div class="grid md:grid-cols-4 gap-4 p-8 md:p-32">
+      <div
+        class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-8 md:p-16"
+      >
         <post-card
           v-for="project in projects"
           :key="project.path"
