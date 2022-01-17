@@ -2,7 +2,7 @@
   <section>
     <header class="h-screen">
       <div class="w-full flex flex-row place-content-end">
-        <navbar class="fixed top-0 z-50 w-3/12" />
+        <navbar class="fixed top-0 z-50" />
       </div>
       <nuxt-img
         src="/background.jpg"
@@ -48,7 +48,7 @@
       >
         <path
           d="m2225 3064.2-365.57-89.603-307.48 89.603-402.63-116.15-391.61 158.19-248.59-135.45-203.12 135.45v69.72h1919z"
-          class="fill-background-main dark:fill-gray-900"
+          class="fill-background-main dark:fill-neutral-900"
         />
       </svg>
       <figure
@@ -66,7 +66,7 @@
       <a id="skills"></a>
       <SectionHeader>Skills</SectionHeader>
       <div
-        class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 p-8 md:p-16 xl:p-32"
+        class="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-32 lg:gap-12 p-16 md:p-18 xl:p-32"
       >
         <Skill
           title="Python"

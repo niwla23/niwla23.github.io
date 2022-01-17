@@ -53,6 +53,7 @@ export default {
     icons: {
       brands: ['faGithub', 'faGitlab', 'faInstagram'],
       regular: ['faArrowAltCircleDown'],
+      solid: ['faBars', 'faTimes'],
     },
   },
 

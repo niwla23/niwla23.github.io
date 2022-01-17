@@ -1,8 +1,24 @@
 <template>
-  <div class="bg-background-main dark:bg-gray-900 min-h-screen">
-    <Nuxt />
+  <div class="bg-background-main dark:bg-neutral-900 min-h-screen pb-8">
+    <Nuxt class="min-h-screen" />
+    <footer class="flex flex-row justify-center text-gray-300 space-x-4">
+      <p>Copyright © {{ year }} niwla23</p>
+      <nuxt-link to="/impressum">Impressum</nuxt-link>
+      <nuxt-link to="/privacy">Datenschutz</nuxt-link>
+    </footer>
   </div>
 </template>
+
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({
+  computed: {
+    year() {
+      return new Date().getFullYear()
+    },
+  },
+})
+</script>
 
 <style>
 html {
