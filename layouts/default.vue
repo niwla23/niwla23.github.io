@@ -1,10 +1,14 @@
 <template>
   <div class="bg-background-main dark:bg-neutral-900 min-h-screen pb-8">
     <Nuxt class="min-h-screen" />
-    <footer class="flex flex-row justify-center text-gray-300 space-x-4">
-      <p>Copyright © {{ year }} niwla23</p>
-      <nuxt-link to="/impressum">Impressum</nuxt-link>
-      <nuxt-link to="/privacy">Datenschutz</nuxt-link>
+    <footer class="text-center text-gray-300 space-x-4">
+      <div>
+        <p>Copyright © {{ year }} niwla23</p>
+        <div>
+          <nuxt-link class="underline" to="/impressum">Impressum</nuxt-link>
+          <nuxt-link class="underline" to="/privacy">Datenschutz</nuxt-link>
+        </div>
+      </div>
     </footer>
   </div>
 </template>
