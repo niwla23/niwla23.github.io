@@ -9,6 +9,7 @@ tags:
   - 3d druck
 ---
 Diese Statusanzeige benutzt einen SSD1306 128x64 Pixel OLED Bildschirm welcher über I2C an einen Raspberry Pi 4 angeschlossen ist.
+<!--more-->
 Der Bildschirm selbst sitzt in einer 3D-gedruckten Halterung am oberen Rand von einem Kallax Regalfach.
 
 ## Angezeigte Informationen
