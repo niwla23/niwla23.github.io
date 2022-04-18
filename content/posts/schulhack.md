@@ -13,7 +13,7 @@ Stundenplans, Aufgabenansicht, Klassenarbeitenübersicht und das Abrufen von Geb
 Die App ist in React Native geschrieben.
 
 [Source Code](https://github.com/niwla23/schulhack)
-[Website](https://schulhack.tk)
+[Website](https://schulhack.netlify.app)
 
 ## Parsing
 
@@ -182,6 +182,18 @@ j.x = 5
 i.x === 5 // true
 j.x === 5 // true
 ```
+
+## Update-Mechanismus
+Normalerweise werden Android Apps über den Google Play Store verteilt und aktualisiert. Für SchulHack gibt es dabei aber zwei Probleme.
+Erstens kostet das Geld und zweitens möchte Google zur Überprüfung vollen Zugriff auf die App haben. Da SchulHack technisch gesehen eher ein Client
+ist (wie ein Mail-Client) und ich nicht einfach das Passwort von meiner Schule an Google geben darf / will müsste ich wahrscheinlich einen Mock-Server
+erstellen der alle Endpoints mit Fakedaten versorgt, aber das ist mir zu viel Aufwand.
+
+Stattdessen nutze ich GitHub Releases. Die App nutzt die GitHub API um die Releases abzurufen und prüft ob eine neuere Version verfügbar ist.
+Wenn das der Fall ist wird dem Nutzer ein Popup mit den Changelogs angezeigt. Darunter befindet sich ein Button welcher auf das GitHub Asset leitet.
+Der Browser lädt die APK herunter und danach wird das Update vom Android Paketmanager (pm) übernommen.
+
+Die Installation läuft über die [Website](https://schulhack.netlify.app). Wenn man dort den Download Button drückt wird man direkt auf das neuste GitHub Asset weitergeleitet und pm übernimmt die Installation.
 
 ## Redirect Probleme
 
