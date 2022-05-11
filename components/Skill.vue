@@ -1,5 +1,8 @@
 <template>
-  <figure class="relative">
+  <figure
+    class="relative cursor-pointer"
+    @click="$router.push(`/posts/tag/${tag}`)"
+  >
     <svg
       version="1.1"
       class="absolute pointer-events-none animation"
@@ -63,6 +66,10 @@ export default Vue.extend({
     mainRotation: {
       required: true,
       type: Number,
+    },
+    tag: {
+      required: true,
+      type: String,
     },
   },
 })

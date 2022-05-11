@@ -9,6 +9,8 @@ tags:
   - esp
   - esp32
   - embedded
+  - loeten
+  - iot
 ---
 
 Mit einem Ultraschallsensor, einem alten Post Kabel und einem Servo habe ich unser Gartentor smart gemacht.

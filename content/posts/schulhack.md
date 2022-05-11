@@ -4,7 +4,8 @@ image: schulhack.png
 tags:
   - app
   - software
-  - react native
+  - react-native
+  - mobile-app
 ---
 
 SchulHack ist eine App mit der sich der Vertretungsplan des Gymnasiums Walsrode abrufen lässt. Weitere Funktionen sind das speichern des

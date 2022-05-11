@@ -4,6 +4,9 @@ image: giskil.png
 tags:
   - game
   - software
+  - web-frontend
+  - design
+  - datenbanken
 ---
 
 Giskil ist ein **multiplayer**, browserbasiertes Spiel bei sich die Spieler eine Definition für ein Wort ausdenken, die möglichst plausibel ist.

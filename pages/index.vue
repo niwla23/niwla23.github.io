@@ -51,7 +51,15 @@
         />
       </svg>
       <figure
-        class="absolute bottom-0 flex flex-row w-full justify-center pb-48 animate-scroll-down"
+        class="
+          absolute
+          bottom-0
+          flex flex-row
+          w-full
+          justify-center
+          pb-48
+          animate-scroll-down
+        "
       >
         <a href="#skills">
           <font-awesome-icon
@@ -74,6 +82,7 @@
           background-color="#80eec0"
           :main-rotation="230"
           :background-rotation="165"
+          tag="python"
         />
         <Skill
           title="Vue.js"
@@ -82,6 +91,7 @@
           background-color="#3366ff"
           :main-rotation="267"
           :background-rotation="181"
+          tag="web-frontend"
         />
         <Skill
           title="React Native"
@@ -90,6 +100,7 @@
           background-color="#80eec0"
           :main-rotation="265"
           :background-rotation="342"
+          tag="mobile-app"
         />
         <Skill
           title="Embedded"
@@ -98,6 +109,7 @@
           background-color="#61dafb"
           :main-rotation="63"
           :background-rotation="264"
+          tag="embedded"
         />
         <Skill
           title="Linux"
@@ -106,6 +118,7 @@
           background-color="#f2841b"
           :main-rotation="19"
           :background-rotation="58"
+          tag="linux"
         />
         <Skill
           title="IT Automation"
@@ -115,6 +128,7 @@
           :main-rotation="160"
           :background-rotation="52"
           text-color="#fff"
+          tag="it-automation"
         />
         <Skill
           title="3D-Druck"
@@ -122,6 +136,7 @@
           main-color="#dbdd3c"
           background-color="#61dafb"
           :main-rotation="323"
+          tag="3d-druck"
         />
         <Skill
           title="Web-Design"
@@ -129,6 +144,7 @@
           main-color="#da55f4"
           background-color="#8061fb"
           :main-rotation="247"
+          tag="design"
         />
         <Skill
           title="Datenbanken"
@@ -136,6 +152,7 @@
           main-color="#7aaee3"
           background-color="#e3af7a"
           :main-rotation="247"
+          tag="datenbanken"
         />
         <Skill
           title="IoT"
@@ -143,6 +160,7 @@
           main-color="#fff14b"
           background-color="#4b59ff"
           :main-rotation="67"
+          tag="iot"
         />
         <Skill
           title="CI/CD"
@@ -150,6 +168,7 @@
           main-color="#ff5252"
           background-color="#ac0000"
           :main-rotation="309"
+          tag="ci"
         />
         <Skill
           title="Löten"
@@ -157,20 +176,15 @@
           main-color="#00a142"
           background-color="#005322"
           :main-rotation="234"
+          tag="loeten"
         />
       </div>
     </section>
     <section>
       <a id="projects"></a>
       <SectionHeader>Projekte</SectionHeader>
-      <div
-        class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 p-8 md:p-16"
-      >
-        <post-card
-          v-for="project in projects"
-          :key="project.path"
-          :article="project"
-        />
+      <div class="p-8 md:p-16">
+        <post-list :articles="projects" />
       </div>
     </section>
   </section>

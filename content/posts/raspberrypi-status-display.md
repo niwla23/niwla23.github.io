@@ -5,8 +5,10 @@ tags:
   - systemadministration
   - software
   - hardware
-  - raspberry pi
-  - 3d druck
+  - raspberry-pi
+  - 3d-druck
+  - design
+  - loeten
 ---
 Diese Statusanzeige benutzt einen SSD1306 128x64 Pixel OLED Bildschirm welcher über I2C an einen Raspberry Pi 4 angeschlossen ist.
 <!--more-->
