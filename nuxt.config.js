@@ -1,4 +1,5 @@
 import highlightjs from 'highlight.js'
+import getRoutes from './utils/getRoutes'
 
 const wrap = (code, lang) =>
   `<pre><code class="hljs ${lang}">${code}</code></pre>`
@@ -74,7 +75,16 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/sitemap',
   ],
+
+  sitemap: {
+    hostname: 'https://niwla23.github.io',
+    gzip: true,
+    routes() {
+      return getRoutes()
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
