@@ -11,6 +11,10 @@ jobs:
         run: |
           yarn
           yarn generate
+      
+      - name: Copy 200.html to 404.html
+        run: |
+          cp 200.html 404.html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.2.0
