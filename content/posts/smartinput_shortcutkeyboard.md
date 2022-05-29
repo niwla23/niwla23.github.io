@@ -8,7 +8,7 @@ tags:
   - embedded
 ---
 
-Eine Shortcut Tastatur mit addressierbarer RGB beleuchtung und frei konfigurierbaren Tasten.
+Eine Shortcut Tastatur mit addressierbarer RGB beleuchtung und frei konfigurierbaren Tasten. [GitHub](https://github.com/niwla23/smartinput_ng)
 <!--more-->
 
 ## Design
