@@ -51,15 +51,7 @@
         />
       </svg>
       <figure
-        class="
-          absolute
-          bottom-0
-          flex flex-row
-          w-full
-          justify-center
-          pb-48
-          animate-scroll-down
-        "
+        class="absolute bottom-0 flex flex-row w-full justify-center pb-48 animate-scroll-down"
       >
         <a href="#skills">
           <font-awesome-icon
