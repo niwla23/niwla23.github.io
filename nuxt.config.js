@@ -50,6 +50,11 @@ export default {
           height: 256,
         },
       },
+      blockImage: {
+        modifiers: {
+          format: 'webp',
+        },
+      },
     },
   },
 
