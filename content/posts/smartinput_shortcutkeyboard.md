@@ -6,6 +6,11 @@ tags:
   - software
   - esp8266
   - embedded
+  - 3d-druck
+  - python
+  - web-frontend
+  - design
+  - loeten
 ---
 
 Eine Shortcut Tastatur mit addressierbarer RGB beleuchtung und frei konfigurierbaren Tasten. [GitHub](https://github.com/niwla23/smartinput_ng)
