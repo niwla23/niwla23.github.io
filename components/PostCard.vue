@@ -13,7 +13,7 @@
       <div class="p-4">
         <h3 class="text-lg pt-2 pb-2">{{ article.title }}</h3>
         <summary class="block">
-          {{ article.description }} {{article.image}}
+          {{ article.description }}
         </summary>
       </div>
     </nuxt-link>
