@@ -7,7 +7,6 @@ tags:
   - esp8266
   - embedded
   - 3d-druck
-  - design
   - loeten
   - mqtt
   - iot
