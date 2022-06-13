@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1655128954",layout:"default",error:a,serverRendered:true,routePath:"\u002Fposts\u002Fschulhack",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"d062fa78"}},_img:{"/_ipx/s_1280x584/schulhack/thumb.png":"\u002F_nuxt\u002Fimage\u002Fe40b85.png"}}}(null));
