@@ -3,9 +3,8 @@
     <nuxt-picture
       preset="blockImage"
       :src="src"
-      class="rounded-md"
+      class="rounded-md max-h-[700]"
       fit="inside"
-      height="700"
     />
   </section>
 </template>

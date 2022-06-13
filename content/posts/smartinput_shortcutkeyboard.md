@@ -28,10 +28,7 @@ Diese stammen größtenteils von FontAwesome. Das Spotify Logo ist direkt von de
 Im inneren sitzt ein WeMos D1 Mini ESP8266 mit eingebautem USB to Serial Adapter. Über den wird das Modul mit dem PC verbunden. Für die Tasten habe ich Cherry MX Red transparent Switches benutzt. Diese sind als Input Matrix verschaltet.
 Außerdem befinden sich 4 Neopixel WS2812B PCBs am Boden des Gehäuses.
 
-  <block-image
-    src="/smartinput_shortcutkeyboard/case_open.jpg"
-    class="h-16">
-  </block-image>
+![](/smartinput_shortcutkeyboard/case_open.jpg)
 
 ## Software
 Die Software besteht aus drei Teilen:

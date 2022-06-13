@@ -21,7 +21,14 @@ Das Gehäuse ist 3D-gedruckt. Der ESP8266 sitzt im Deckel und ist mit zwei Kabel
     src="/mqttsiren/open.jpg"
     class="h-16">
   </block-image>
-
+  <block-image
+    src="/mqttsiren/body.png"
+    class="h-16">
+  </block-image>
+  <block-image
+    src="/mqttsiren/deckel.png"
+    class="h-16">
+  </block-image>
 
 ## Code für Sirenen Sound
 ```c++
