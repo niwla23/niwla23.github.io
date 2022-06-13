@@ -1,1 +1,0 @@
-window.__NUXT__=(function(a){return {staticAssetsBase:"\u002F_nuxt\u002Fstatic\u002F1655129482",layout:"default",error:a,serverRendered:true,routePath:"\u002Fposts\u002Fservopoti",config:{_app:{basePath:"\u002F",assetsPath:"\u002F_nuxt\u002F",cdnURL:a},content:{dbHash:"9df995cb"}},_img:{"/_ipx/s_1280x584/servopoti/thumb.jpg":"\u002F_nuxt\u002Fimage\u002F69a27e.jpg"}}}(null));
