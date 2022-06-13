@@ -1,6 +1,6 @@
 ---
 title: Servopoti
-image: servopoti.jpg
+image: /servopoti/thumb.jpg
 tags:
   - hardware
   - software

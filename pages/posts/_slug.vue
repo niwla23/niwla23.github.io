@@ -12,7 +12,7 @@
           <nuxt-img
             width="1280"
             height="584"
-            :src="'/postthumbs/' + article.image"
+            :src="article.image"
             class="object-cover h-96 w-full article-image rounded-md transform hover:scale-105 transition transi-duration-500"
           />
         </header>

@@ -6,14 +6,14 @@
       <div class="overflow-hidden">
         <nuxt-img
           preset="thumbnail"
-          :src="'/postthumbs/' + article.image"
+          :src="article.image"
           class="object-cover h-64 w-full article-image rounded-md"
         />
       </div>
       <div class="p-4">
         <h3 class="text-lg pt-2 pb-2">{{ article.title }}</h3>
         <summary class="block">
-          {{ article.description }}
+          {{ article.description }} {{article.image}}
         </summary>
       </div>
     </nuxt-link>

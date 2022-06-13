@@ -1,6 +1,6 @@
 ---
 title: Handysteuerung Tor
-image: gateautomation.jpg
+image: /gateautomation/thumb.jpg
 tags:
   - app
   - openhab

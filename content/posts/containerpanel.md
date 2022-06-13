@@ -1,6 +1,6 @@
 ---
 title: Containerpanel
-image: containerpanel.png
+image: /containerpanel/thumb.png
 tags:
   - app
   - software

@@ -1,6 +1,6 @@
 ---
 title: Giskil
-image: giskil.png
+image: /giskil/thumb.png
 tags:
   - game
   - software

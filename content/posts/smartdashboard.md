@@ -1,6 +1,6 @@
 ---
 title: smartdashboard
-image: smartdashboard.jpg
+image: /smartdashboard/thumb.jpg
 tags:
   - app
   - software

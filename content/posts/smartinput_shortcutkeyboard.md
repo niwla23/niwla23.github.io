@@ -1,6 +1,6 @@
 ---
 title: SmartInput Shortcut Keyboard
-image: smartinput_shortcutkeyboard.png
+image: /smartinput_shortcutkeyboard/thumb.png
 tags:
   - hardware
   - software

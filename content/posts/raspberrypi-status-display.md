@@ -1,6 +1,6 @@
 ---
 title: Raspberry Pi Mini OLED Status Display
-image: raspberrypi-status-display.jpg
+image: /raspberrypi-status-display/thumb.jpg
 tags:
   - systemadministration
   - software
