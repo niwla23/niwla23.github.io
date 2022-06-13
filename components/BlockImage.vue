@@ -1,5 +1,5 @@
 <template>
-  <section class="flex flex-row w-full justify-center" style="height: 700px">
+  <section class="flex flex-row w-full justify-center">
     <nuxt-picture
       preset="blockImage"
       :src="src"
