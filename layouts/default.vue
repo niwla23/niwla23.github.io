@@ -8,6 +8,9 @@
           <nuxt-link class="underline" to="/impressum">Impressum</nuxt-link>
           <nuxt-link class="underline" to="/privacy">Datenschutz</nuxt-link>
         </div>
+        <div class="flex justify-center w-full py-8">
+          <nuxt-picture src="/icon.png" width="64" fit="inside" />
+        </div>
       </div>
     </footer>
   </div>
