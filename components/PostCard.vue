@@ -2,7 +2,7 @@
   <article
     class="bg-white dark:bg-slate-800 dark:text-white article-card cursor-pointer shadow-lg rounded-md"
   >
-    <nuxt-link :to="'posts/' + article.slug" class="">
+    <nuxt-link :to="'/posts/' + article.slug" class="">
       <div class="overflow-hidden">
         <nuxt-img
           preset="thumbnail"
