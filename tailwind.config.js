@@ -17,8 +17,10 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: '#07666e',
-        'primary-transparent': 'rgba(7, 102, 110, 0.8)',
+        'primary': '#01a8b1',
+        'primary-transparent': 'rgba(1, 168, 177, .8)',
+        'secondary': '#016bb9',
+        'tertiary': '#c1dbfe',
         'background-main': '#dfebff',
       },
       keyframes: {

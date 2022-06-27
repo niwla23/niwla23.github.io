@@ -34,8 +34,7 @@
       >
         <path
           d="m 1379 1693 l -190.86 291.42 l -197.42 593.11 l -682.72 720.47 v -1605 h 1071 z"
-          fill="#07666e"
-          fill-opacity=".88"
+          class="fill-primary-transparent"
         />
       </svg>
       <svg
