@@ -1,6 +1,6 @@
 <template>
   <figure
-    class="relative cursor-pointer"
+    class="relative cursor-pointer w-72 md:w-64"
     @click="$router.push(`/posts/tag/${tag}`)"
   >
     <svg

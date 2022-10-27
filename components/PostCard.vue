@@ -1,17 +1,16 @@
 <template>
-  <article
-    class="bg-white dark:bg-slate-800 dark:text-white article-card cursor-pointer shadow-lg rounded-md"
-  >
+  <article class="bg-white dark:bg-slate-800 dark:text-white article-card cursor-pointer shadow-lg rounded-md">
     <nuxt-link :to="'/posts/' + article.slug" class="">
-      <div class="overflow-hidden">
-        <nuxt-img
-          preset="thumbnail"
-          :src="article.image"
-          class="object-cover h-64 w-full article-image rounded-md"
-        />
-      </div>
+      <figure class="relative">
+        <div class="overflow-hidden">
+          <nuxt-img preset="thumbnail" :src="article.image" class="object-cover h-64 w-full article-image rounded-t-md" />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black/70"></div>
+        <h3 class="absolute bottom-0 text-lg p-4 text-white">{{ article.title }} <span v-if="article.featured"
+            class="bg-primary p-2 rounded-full text-xs">Featured</span></h3>
+      </figure>
+
       <div class="p-4">
-        <h3 class="text-lg pt-2 pb-2">{{ article.title }}</h3>
         <summary class="block">
           {{ article.description }}
         </summary>
@@ -35,9 +34,10 @@ export default Vue.extend({
   transition-timing-function: ease-in-out;
 }
 
-.article-card:hover > div > .article-image {
+.article-card:hover>div>.article-image {
   transform: scale(1.2) rotate(4deg);
 }
+
 .article-card:hover {
   transform: scale(1.04);
 }

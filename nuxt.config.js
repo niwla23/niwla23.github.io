@@ -77,6 +77,7 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    'nuxt-content-git',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
     '@nuxtjs/sitemap',

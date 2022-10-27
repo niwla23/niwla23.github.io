@@ -21,7 +21,8 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.8.3",
     "highlight.js": "^11.4.0",
-    "nuxt": "^2.14.12"
+    "nuxt": "^2.14.12",
+    "nuxt-content-git": "^2.0.14"
   },
   "devDependencies": {
     "@nuxt/image": "^0.6.0",

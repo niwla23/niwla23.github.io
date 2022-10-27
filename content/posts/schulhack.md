@@ -1,6 +1,7 @@
 ---
 title: SchulHack
 image: /schulhack/thumb.png
+featured: true
 tags:
   - app
   - software
