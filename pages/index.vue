@@ -92,7 +92,7 @@ export default Vue.extend({
     const projects = await $content('posts')
       .only(['title', 'image', 'tags', 'slug', 'description', 'createdAt', 'featured'])
       .sortBy('featured', "desc")
-      .sortBy('createdAt')
+      .sortBy('createdAt', 'desc')
       .fetch()
 
     return {
