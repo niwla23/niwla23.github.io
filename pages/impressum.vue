@@ -24,7 +24,7 @@ import Vue from 'vue'
 import Navbar from '~/components/Navbar.vue'
 export default Vue.extend({
   components: { Navbar },
-  async asyncData({ $content, params }) {
+  async asyncData({ $content }) {
     const article = await $content('impressum').fetch()
 
     return { article }
