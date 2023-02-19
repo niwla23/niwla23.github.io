@@ -10,7 +10,7 @@ Angaben gemäß § 5 TMG
 ## Kontakt
 
 - Telefon: 05161-6824
-- E-Mail: alwin@cloudserver.click
+- E-Mail: alwin.lohrie@proton.me
 
 ## Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV**
 
