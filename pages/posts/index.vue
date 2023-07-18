@@ -4,7 +4,7 @@
       <navbar class="fixed top-0 z-50" />
     </div>
     <div class="p-8 md:p-32 md:pt-16">
-      <h1 class="dark:text-white text-3xl pb-4">Blog</h1>
+      <h1 class="text-3xl pb-4">Blog</h1>
       <post-list :articles="projects" />
     </div>
   </section>

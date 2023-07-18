@@ -1,7 +1,9 @@
 <template>
   <section class="w-full flex justify-center section-header">
     <div style="width: fit-content">
-      <h2 class="text-3xl text-center dark:text-white"><slot /></h2>
+      <h2 class="text-3xl text-center">
+        <slot />
+      </h2>
       <figure class="w-auto h-2 bg-primary underline" />
     </div>
   </section>
@@ -16,7 +18,7 @@ export default Vue.extend({})
 .underline {
   transition: all 0.7s ease-in-out;
 }
-.section-header:hover > div > .underline {
+
+.section-header:hover>div>.underline {
   transform: translateX(55px);
-}
-</style>
+}</style>

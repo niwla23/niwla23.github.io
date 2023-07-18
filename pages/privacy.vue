@@ -10,10 +10,7 @@
             {{ article.title }}
           </h1>
         </header>
-        <nuxt-content
-          :document="article"
-          class="prose prose-green dark:prose-invert max-w-full prose-pre:p-0"
-        />
+        <nuxt-content :document="article" class="prose prose-green max-w-full prose-pre:p-0" />
       </main>
     </section>
   </div>

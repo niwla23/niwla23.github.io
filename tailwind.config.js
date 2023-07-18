@@ -21,7 +21,8 @@ module.exports = {
         'primary-transparent': 'rgba(1, 168, 177, .8)',
         'secondary': '#016bb9',
         'tertiary': '#c1dbfe',
-        'background-main': '#dfebff',
+        'background-main': '#fff',
+        'background-secondary': '#dfebff'
       },
       keyframes: {
         'lite-bounce': {

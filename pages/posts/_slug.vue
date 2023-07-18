@@ -9,17 +9,10 @@
           <h1 class="absolute bottom-0 m-8 font-bold text-3xl text-white z-50">
             {{ article.title }}
           </h1>
-          <nuxt-img
-            width="1280"
-            height="584"
-            :src="article.image"
-            class="object-cover h-96 w-full article-image rounded-md transform hover:scale-105 transition transi-duration-500"
-          />
+          <nuxt-img width="1280" height="584" :src="article.image"
+            class="object-cover h-96 w-full article-image rounded-md transform hover:scale-105 transition transi-duration-500" />
         </header>
-        <nuxt-content
-          :document="article"
-          class="prose prose-green dark:prose-invert max-w-full prose-pre:p-0"
-        />
+        <nuxt-content :document="article" class="prose prose-green max-w-full prose-pre:p-0" />
       </main>
     </section>
   </div>
