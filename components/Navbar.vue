@@ -1,8 +1,7 @@
 <template>
   <div :class="{ 'w-full': isMobile }" class="flex justify-end">
     <transition name="menu">
-      <nav v-if="showMenu || !isMobile" class="p-6 w-screen md:w-full"
-        :class="{ 'bg-primary-transparent': !$props.white }">
+      <nav v-if="showMenu || !isMobile" class="p-6 bg-primary-transparent w-screen md:w-full">
         <button v-if="isMobile" class="text-3xl p-4 absolute top-0 right-0" @click="toggleMenu">
           <font-awesome-icon :icon="['fas', 'times']" />
         </button>
@@ -19,7 +18,7 @@
         </ul>
       </nav>
     </transition>
-    <button v-if="!showMenu | !isMobile" class="text-3xl p-4 absolute top-0 right-0" @click="toggleMenu">
+    <button v-if="!showMenu || !isMobile" class="text-3xl p-4 absolute top-0 right-0" @click="toggleMenu">
       <font-awesome-icon v-if="isMobile" :icon="['fas', 'bars']" />
     </button>
   </div>
@@ -33,13 +32,6 @@ export default Vue.extend({
       showMenu: false,
       windowWidth: 1280,
     }
-  },
-  props: {
-    white: {
-      required: false,
-      default: false,
-      type: Boolean,
-    },
   },
   computed: {
     isMobile() {
