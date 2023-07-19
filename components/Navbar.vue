@@ -13,7 +13,7 @@
             <nuxt-link :to="{ path: '/', hash: '#skills' }">Skills</nuxt-link>
           </li>
           <li>
-            <nuxt-link :to="{ path: '/', hash: '#projects' }">Projekte</nuxt-link>
+            <nuxt-link :to="{ path: '/', hash: '#projects' }">Projects</nuxt-link>
           </li>
         </ul>
       </nav>

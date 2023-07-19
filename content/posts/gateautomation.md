@@ -14,30 +14,33 @@ tags:
   - iot
 ---
 
-Mit einem Ultraschallsensor, einem alten Post Kabel und einem Servo habe ich unser Gartentor smart gemacht.
+With an ultrasonic sensor, an old postal cable, and a servo, I made our garden gate smart.
 <!--more-->
-Das Tor hat eine Fernbedienung, die nur einen Knopf hat. Dieser Knopf führt eine der folgenden Aktionen aus:
 
-- Auf
-- Zu
-- Stopp
+The gate has a remote control with only one button. This button performs one of the following actions:
 
-Wobei sich das Tor immer in die entgegengesetzte Richtung bewegt in die es sich beim letzten Mal bewegt hat. Den Knopf habe ich zuerst mit Fischertechnik Pneumatik und einem ESP32 gestuert. Später habe ich die Pneumatik durch einen Servo ausgetauscht.
-Das Tor lässt sich so schon steuern, man weiß aber nicht in welchem Zustand es sich gerade befindet.
+- Open
+- Close
+- Stop
 
-Meine erste Idee war einen ESP32 mit Ultraschallsensor am Tor anzubringen, der den Abstand misst.
+The gate always moves in the opposite direction of its last movement. Initially, I controlled the button using Fischertechnik Pneumatics and an ESP32. Later, I replaced the pneumatics with a servo.
 
-> Problem: kein WLAN
-Zuffälligerweise lag zwischen Keller und Tor ein altes Postkabel. Nach einem halben Tag messen hatte ich dann alle Adern zugeordnet.
-Ich musste also nur noch den Ultraschallsensor an das Kabel löten, einen ESP an der anderen Seite anbringen und ein Gehäuse für den Sensor drucken.
-Das ganze sieht dann so aus:
+While the gate could be controlled, there was no way to know its current state.
 
-Bild: Ultraschallsensor
+My initial idea was to attach an ESP32 with an ultrasonic sensor to the gate to measure the distance.
 
-Bild: ESP32
+> Problem: No Wi-Fi
+Coincidentally, there was an old postal cable between the basement and the gate. After half a day of measurements, I managed to identify all the wires.
 
-Um das ganze mit einem Slider in openHAB steuern zu können, habe ich eine Regel erstellt, die das Tor in die gewünscht Position fährt.
-Diese regel wird ausgeführt, wenn der Tor Slider einen Befehlt erhält.
+All I had to do was solder the ultrasonic sensor to the cable, attach an ESP32 on the other end, and 3D print a casing for the sensor.
+
+Here's how it looks:
+
+![Ultraschallsensor](ultrasonic_sensor_image_link)
+
+![ESP32](esp32_image_link)
+
+To control it using a slider in openHAB, I created a rule that moves the gate to the desired position. This rule is triggered when the gate slider receives a command.
 
 ```python
 import time
@@ -111,11 +114,9 @@ else:
 logger.info("position is ok now, exiting...")
 events.sendCommand('gate_working', 'OFF')
 ```
+This rule updates the label of the slider when the gate's working state changes. It prevents the control rule from running twice, which would lead to chaos.
 
-Diese Regel ändert das Label vom Slider wenn sich der `working` Zustand vom Tor ändert. Dieser verhindert, dass die Steuerungsregel doppelt läuft
-was zu ziemlichem Chaos führt.
-Der pushes > 10 Check verhindert das in dem Fall, dass der Sensor kapput geht alle paar Sekunden der Knopf gedrückt wird was bei gleichzeitigem
-Ausfall der VPN Verbindung außerhalb des Netzwerks nicht mehr zu stoppen wäre.
+The pushes > 10 check prevents the button from being pressed every few seconds in case of sensor failure, which would be uncontrollable in case of a VPN connection failure outside the network.
 
 ```yaml
 triggers:
@@ -136,6 +137,7 @@ actions:
   ```
 
 Diese Regel, der gate proxy updater setzt den Wert vom Tor Controlslider auf den invertierten Wert vom Sensor.
+The rule "gate_proxy_updater" sets the value of the Gate Control Slider to the inverted value of the sensor.
 
 ```yaml
 triggers:

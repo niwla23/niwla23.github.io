@@ -25,14 +25,14 @@
             :main-rotation="323" tag="3d-druck" />
           <Skill title="IoT" text="MQTT, openHAB, Influx, Grafana" main-color="#fff14b" background-color="#4b59ff"
             :main-rotation="67" tag="iot" />
-          <Skill title="Hardware" text="Löten und so" main-color="#00a142" background-color="#005322" :main-rotation="234"
-            tag="loeten" />
+          <Skill title="Hardware" text="Electronics, Soldering, ..." main-color="#00a142" background-color="#005322"
+            :main-rotation="234" tag="loeten" />
         </div>
       </div>
     </section>
     <section>
       <a id="projects"></a>
-      <SectionHeader>Projekte</SectionHeader>
+      <SectionHeader>Projects</SectionHeader>
       <div class="p-8 md:p-16">
         <post-list :articles="projects" />
       </div>

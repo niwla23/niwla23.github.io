@@ -1,7 +1,6 @@
 ---
 title: Auctiongame
 image: /auctiongame/thumb.png
-featured: true
 tags:
   - game
   - software
