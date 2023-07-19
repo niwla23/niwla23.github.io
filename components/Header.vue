@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen w-full bg-none">
-    <nuxt-img src="/background.jpg" class="absolute w-full h-[120%] md:h-[110]vh object-cover" />
+    <nuxt-img src="/background2.jpg" class="absolute w-full h-[120%] md:h-[110]vh object-cover" />
     <div class="h-full w-full bg-transparent flex justify-center items-center p-8 text-gray-900 z-50">
       <div
         class="flex flex-col md:flex-row gap-8 max-w-sm md:max-w-2xl md:items-center bg-teal-100 p-8 w-full md:mb-0 rounded-xl transform hover:scale-95 transition duration-1000 ease-in-out">
