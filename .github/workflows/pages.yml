@@ -12,6 +12,8 @@ jobs:
         with:
           node-version: 22
 
+      - uses: pnpm/action-setup@v4
+
       - name: Install dependencies 👨🏻‍💻
         run: pnpm install
  
