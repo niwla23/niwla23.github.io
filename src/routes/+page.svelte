@@ -19,7 +19,7 @@
 				<a href="https://github.com/wireva">
 					<Icon icon="bi:github" height="30" class="dash-20" />
 				</a>
-				<a href="https://matrix.to/#/@wireva:nope.chat">
+				<a href="https://matrix.to/#/@lea:wireva.eu">
 					<Icon icon="ph:matrix-logo-bold" height="35" class="dash-20" />
 				</a>
 				<a href="https://blahaj.zone/@wireva">
